@@ -2,10 +2,12 @@ from datetime import datetime
 import time
 
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 def find_element(driver, search_type, value):
@@ -37,8 +39,20 @@ def test_hogwarts():
     date_m = now.strftime("%Y%m%d")
     date = year + '-' + month + '-' + day
     print(date)
-    browser = webdriver.Chrome("C://chromedriver.exe")
+
+    browser_options = Options()
+    browser_options.headless = True
+    browser = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
+    # browser.get(URL_main)
+
+    # browser = webdriver.Chrome("C://chromedriver.exe")
+
+ #    browser = webdriver.Chrome("C://chromedriver.exe")
     browser.get('https://witty-hill-0acfceb03.azurestaticapps.net/hogwards.html')
+    browser.maximize_window()
+
+
+
     time.sleep(2)
 
     # elem lekérdezések

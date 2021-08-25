@@ -47,11 +47,8 @@ def test_hogwarts():
 
     # browser = webdriver.Chrome("C://chromedriver.exe")
 
- #    browser = webdriver.Chrome("C://chromedriver.exe")
     browser.get('https://witty-hill-0acfceb03.azurestaticapps.net/hogwards.html')
     browser.maximize_window()
-
-
 
     time.sleep(2)
 

@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Wed Aug 25 18:54:15 GMT 2021","Wed Aug 25 18:54:18 GMT 2021","2818","testproject","test_timesheet","","","","test_timesheet1",""
-"failed","Wed Aug 25 18:54:03 GMT 2021","Wed Aug 25 18:54:15 GMT 2021","11357","testproject","test_hogwards","","","","test_hogwarts",""
-"passed","Wed Aug 25 18:54:18 GMT 2021","Wed Aug 25 18:54:27 GMT 2021","8908","testproject","test_timesheet","","","","test_timesheet2",""

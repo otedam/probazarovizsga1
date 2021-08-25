@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://otedam.github.io/probazarovizsga1",
+  "buildOrder" : 3,
+  "buildName" : "GitHub Actions Run #1167744799",
+  "buildUrl" : "https://github.com/otedam/probazarovizsga1/actions/runs/1167744799",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://otedam.github.io/probazarovizsga1/3/"
+} ]

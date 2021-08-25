@@ -1,0 +1,89 @@
+{
+  "uid" : "4e9da37b96e54d45",
+  "name" : "test_hogwarts",
+  "fullName" : "testproject.test_hogwards#test_hogwarts",
+  "historyId" : "209e7d3e0979a53a01c43c3ca9cb6764",
+  "time" : {
+    "start" : 1629917643946,
+    "stop" : 1629917655303,
+    "duration" : 11357
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert '0001-08-25' == '2021-08-25'\n  - 2021-08-25\n  ? - ^\n  + 0001-08-25\n  ?  ^^",
+  "statusTrace" : "def test_hogwarts():\n        now = datetime.now()\n        print(now)\n        year = now.strftime(\"%Y\")\n        print(\"year:\", year)\n    \n        month = now.strftime(\"%m\")\n        print(\"month:\", month)\n    \n        day = now.strftime(\"%d\")\n        print(\"day:\", day)\n        date_m = now.strftime(\"%Y%m%d\")\n        date = year + '-' + month + '-' + day\n        print(date)\n    \n        browser_options = Options()\n        browser_options.headless = True\n        browser = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)\n        # browser.get(URL_main)\n    \n        # browser = webdriver.Chrome(\"C://chromedriver.exe\")\n    \n     #    browser = webdriver.Chrome(\"C://chromedriver.exe\")\n        browser.get('https://witty-hill-0acfceb03.azurestaticapps.net/hogwards.html')\n        browser.maximize_window()\n    \n    \n    \n        time.sleep(2)\n    \n        # elem lekérdezések\n        passenger = find_element(browser, By.ID, 'passenger')\n        departure_date = find_element(browser, By.ID, 'departure-date')\n        departure_time = find_element(browser, By.ID, 'departure-time')\n        btn_issue_ticket = find_element(browser, By.ID, 'issue-ticket')\n    \n        passenger.send_keys(\"Harry\")\n        departure_date.send_keys(year)\n        departure_date.send_keys(Keys.TAB)\n        departure_date.send_keys(month)\n        departure_date.send_keys(day)\n        time_m = now.strftime(\"%H:%M\")\n        print(\"time_m: \", time_m)\n        departure_time.send_keys(time_m)\n        btn_issue_ticket.click()\n    \n        passenger_name = find_element(browser, By.ID, 'passenger-name').text\n        departure_date_text = find_element(browser, By.ID, 'departure-date-text').text\n        departure_time_text = find_element(browser, By.ID, 'departure-time-text').text\n        departure_time_text = departure_time_text[:-2]\n        print(passenger_name)\n        print(departure_date_text)\n        conv_time = timeConversion(time_m)\n        print(\"conv_time_m: \", conv_time)\n        print(departure_time_text)\n    \n        assert passenger_name == \"HARRY\"\n>       assert departure_date_text == date\nE       AssertionError: assert '0001-08-25' == '2021-08-25'\nE         - 2021-08-25\nE         ? - ^\nE         + 0001-08-25\nE         ?  ^^\n\ntestproject/test_hogwards.py:85: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert '0001-08-25' == '2021-08-25'\n  - 2021-08-25\n  ? - ^\n  + 0001-08-25\n  ?  ^^",
+    "statusTrace" : "def test_hogwarts():\n        now = datetime.now()\n        print(now)\n        year = now.strftime(\"%Y\")\n        print(\"year:\", year)\n    \n        month = now.strftime(\"%m\")\n        print(\"month:\", month)\n    \n        day = now.strftime(\"%d\")\n        print(\"day:\", day)\n        date_m = now.strftime(\"%Y%m%d\")\n        date = year + '-' + month + '-' + day\n        print(date)\n    \n        browser_options = Options()\n        browser_options.headless = True\n        browser = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)\n        # browser.get(URL_main)\n    \n        # browser = webdriver.Chrome(\"C://chromedriver.exe\")\n    \n     #    browser = webdriver.Chrome(\"C://chromedriver.exe\")\n        browser.get('https://witty-hill-0acfceb03.azurestaticapps.net/hogwards.html')\n        browser.maximize_window()\n    \n    \n    \n        time.sleep(2)\n    \n        # elem lekérdezések\n        passenger = find_element(browser, By.ID, 'passenger')\n        departure_date = find_element(browser, By.ID, 'departure-date')\n        departure_time = find_element(browser, By.ID, 'departure-time')\n        btn_issue_ticket = find_element(browser, By.ID, 'issue-ticket')\n    \n        passenger.send_keys(\"Harry\")\n        departure_date.send_keys(year)\n        departure_date.send_keys(Keys.TAB)\n        departure_date.send_keys(month)\n        departure_date.send_keys(day)\n        time_m = now.strftime(\"%H:%M\")\n        print(\"time_m: \", time_m)\n        departure_time.send_keys(time_m)\n        btn_issue_ticket.click()\n    \n        passenger_name = find_element(browser, By.ID, 'passenger-name').text\n        departure_date_text = find_element(browser, By.ID, 'departure-date-text').text\n        departure_time_text = find_element(browser, By.ID, 'departure-time-text').text\n        departure_time_text = departure_time_text[:-2]\n        print(passenger_name)\n        print(departure_date_text)\n        conv_time = timeConversion(time_m)\n        print(\"conv_time_m: \", conv_time)\n        print(departure_time_text)\n    \n        assert passenger_name == \"HARRY\"\n>       assert departure_date_text == date\nE       AssertionError: assert '0001-08-25' == '2021-08-25'\nE         - 2021-08-25\nE         ? - ^\nE         + 0001-08-25\nE         ?  ^^\n\ntestproject/test_hogwards.py:85: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "5c7833d157f4e0b6",
+      "name" : "log",
+      "source" : "5c7833d157f4e0b6.txt",
+      "type" : "text/plain",
+      "size" : 642
+    }, {
+      "uid" : "d02e4e855fccdd0c",
+      "name" : "stdout",
+      "source" : "d02e4e855fccdd0c.txt",
+      "type" : "text/plain",
+      "size" : 125
+    }, {
+      "uid" : "a3902e156921d3d6",
+      "name" : "stderr",
+      "source" : "a3902e156921d3d6.txt",
+      "type" : "text/plain",
+      "size" : 435
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "testproject"
+  }, {
+    "name" : "suite",
+    "value" : "test_hogwards"
+  }, {
+    "name" : "host",
+    "value" : "fv-az33-712"
+  }, {
+    "name" : "thread",
+    "value" : "3103-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testproject.test_hogwards"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "4e9da37b96e54d45.json",
+  "parameterValues" : [ ]
+}

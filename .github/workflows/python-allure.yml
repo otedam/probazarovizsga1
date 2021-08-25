@@ -1,0 +1,61 @@
+name: Python CI-CD with allure report
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.9]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9.5
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install flake8 pytest
+        if [ -f testproject/requirements.txt ]; then pip install -r testproject/requirements.txt; fi
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install Chrome
+      run: |
+        sudo apt install google-chrome-stable
+
+    - name: Test with pytest
+      run: |
+        pytest --alluredir=allure-results
+
+    - name: Allure Report action from marketplace
+      uses: simple-elf/allure-report-action@master
+      if: always()
+      with:
+        allure_results: allure-results
+        allure_history: allure-history
+        keep_reports: 20
+
+
+    - name: Deploy report to Github Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: allure-history

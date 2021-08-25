@@ -1,0 +1,13 @@
+[ {
+  "buildOrder" : 1,
+  "reportUrl" : "https://otedam.github.io/probazarovizsga1/1/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 1,
+    "skipped" : 0,
+    "passed" : 2,
+    "unknown" : 0,
+    "total" : 3
+  }
+} ]

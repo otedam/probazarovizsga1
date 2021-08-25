@@ -1,0 +1,63 @@
+{
+  "209e7d3e0979a53a01c43c3ca9cb6764" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "aa6acf75d67bfd0b",
+      "reportUrl" : "https://otedam.github.io/probazarovizsga1/1//#testresult/aa6acf75d67bfd0b",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home",
+      "time" : {
+        "start" : 1629915629750,
+        "stop" : 1629915629753,
+        "duration" : 3
+      }
+    } ]
+  },
+  "ec990bc6859f48fdd32eeca2ab277145" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e74ea38469539d94",
+      "reportUrl" : "https://otedam.github.io/probazarovizsga1/1//#testresult/e74ea38469539d94",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629915633614,
+        "stop" : 1629915642461,
+        "duration" : 8847
+      }
+    } ]
+  },
+  "49b06188194267311e979513ab5790e4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "55f528d1188f57ca",
+      "reportUrl" : "https://otedam.github.io/probazarovizsga1/1//#testresult/55f528d1188f57ca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629915629869,
+        "stop" : 1629915633611,
+        "duration" : 3742
+      }
+    } ]
+  }
+}
